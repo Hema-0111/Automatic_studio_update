@@ -41,14 +41,26 @@ types:
               {
                 "message": "created successfully"
               }
-/getCourses:
-  get:
-    description: "Get courses"
-  responses:
-    200:
-      body:
-        application/json:
-          example:
-            {
-              "message": "New Flow"
-            }
+/updateStudent:
+  put:
+    description: "Update Student info"
+    body:
+      application/json:
+        type: addStudentData
+        example:
+          {
+            "name": "Hema",
+            "place": "Tpt",
+            "phoneNumber": 124567
+          }
+    responses:
+      201:
+        description: "Student Created"
+        body:
+          application/json:
+            type: addStudRes
+            example:
+              {
+                "message": "updated successfully"
+              }
+

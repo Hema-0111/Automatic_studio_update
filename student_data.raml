@@ -41,5 +41,14 @@ types:
               {
                 "message": "created successfully"
               }
-/createCourses:
-  post:
+/getCourses:
+  get:
+    description: "Get courses"
+  responses:
+    200:
+      body:
+        application/json:
+          example:
+            {
+              "message": "New Flow"
+            }

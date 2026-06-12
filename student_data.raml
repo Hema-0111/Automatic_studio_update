@@ -5,8 +5,9 @@ types:
   addStudentData: 
     type: object
     properties:
-      name?:
+      name:
         type: string
+        required : true
       place?:
         type: string
       phoneNumber:
@@ -40,26 +41,3 @@ types:
               {
                 "message": "created successfully"
               }
-/updateStudent:
-  put:
-    description: "Update Student info"
-    body:
-      application/json:
-        type: addStudentData
-        example:
-          {
-            "name": "Hema",
-            "place": "Tpt",
-            "phoneNumber": 124567
-          }
-    responses:
-      201:
-        description: "Student Created"
-        body:
-          application/json:
-            type: addStudRes
-            example:
-              {
-                "message": "updated successfully"
-              }
-
